@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Indian Railway Recruitment Control Board</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="contener">
+    <div id="header">
+        <div id="logo"><img src="logo.png" alt="" /></div>
+        <div id="header-right">
+            <div id="header-right_top">
+                <div class="topmenu">
+                    <ul>
+                        <li style="background: none;"><a href="index.html">Home</a></li>
+                        <li><a href="about_us.html">About Us</a></li>
+                        <li><a href="contact_us.html">Contact Us</a></li>
+                        <li><a href="home.html">Zonal Railways Results</a></li>
+                    </ul>
+                    <div class="spacer"></div>
+                </div>
+            </div>
+            <div id="header-right_buttom">
+                <div class="logo_text">
+                    <div style="width:700px; float:left;">  
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RAILWAY RECRUITMENT CONTROL BOARD 
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span style="font-size:25px;"> Welcome To Indian Railways </span>   
+                        <span style="font:normal 13px 'Comic Sans MS', cursive; color:#fff;">...lifeline to the nation</span>
+                        </p>
+                    </div>
+                    <div style="width:80px; float:left;"><img src="new.png"/></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--body start -->
+    <div id="body_content">
+        <div class="line"></div>
+        <form onsubmit="showResult(event)">
+        <table width="980" border="0px" bordercolor="#CCCCCC" cellspacing="0" cellpadding="0" style="line-height:30px; border:0px solid #ccc;">
+            <tr>
+                <td colspan="2" class="title">Check Your Results</td>
+            </tr>
+
+            <tr>
+                <td width="468" align="center">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Roll No. : 
+                    <input name="roll_no" id="roll_no" type="text" placeholder="Please Enter Roll Number" size="30" required /> 
+                </td>
+            </tr>
+
+            <tr><td align="center">&nbsp;</td></tr>
+
+            <tr>
+                <td width="468" align="center">
+                    <input name="sub" type="submit" value="CHECK RESULT" />
+                </td>
+            </tr>
+
+            <tr><td align="center">&nbsp;</td></tr>
+        </table>
+        </form>
+
+        <!-- Result display -->
+        <div style="text-align:center;">
+            <table id="resultTable" style="margin: 20px auto; display:none; border: 1px solid #ccc;" cellpadding="10">
+                <thead>
+                    <tr style="background-color:#f2f2f2;">
+                        <th>Name</th>
+                        <th>Roll Number</th>
+                        <th>Mark</th>
+                        <th>Remark</th>
+                    </tr>
+                </thead>
+                <tbody id="resultBody"></tbody>
+            </table>
+        </div>
+
+        <div class="line"><p style="margin-left:400px; color:#F00; font-size:18px;"> </p></div>
+    </div>
+    <!--body end-->
+
+    <!--footer -->
+    <div id="footer">
+        <ul>
+            <li class="none"><a href="index.html">Home</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="contact_us.html">Contact us</a></li>
+            <li><a href="home.html">Zonal Railways Results</a></li>
+        </ul>
+        <br /><br />
+        <p>Copyright@ 2006-2007 railway Recruitment Control Board All rights reserved...</p>
+    </div>
+</div>
+
+<script>
+
+function showResult(event) {
+    event.preventDefault();
+    const rollNo = document.getElementById("roll_no").value;
+
+    const dummyResults = {
+        "123456": { name: "Rahul Sharma", mark: 88, remark: "Passed" },
+        "654321": { name: "Sneha Patel", mark: 47, remark: "Failed" },
+        "111111": { name: "Arjun Das", mark: 75, remark: "Passed" }
+    };
+
+    const result = dummyResults[rollNo];
+    const tbody = document.getElementById("resultBody");
+    const table = document.getElementById("resultTable");
+    tbody.innerHTML = "";
+
+    if (result) {
+        tbody.innerHTML = `
+            <tr>
+                <td>${result.name}</td>
+                <td>${rollNo}</td>
+                <td>${result.mark}</td>
+                <td>${result.remark}</td>
+            </tr>
+        `;
+    } else {
+        tbody.innerHTML = `
+            <tr><td colspan="4">No result found for Roll Number: ${rollNo}</td></tr>
+        `;
+    }
+
+    table.style.display = "table";
+}
+
+// Auto-hide result table when input changes
+document.getElementById("roll_no").addEventListener("input", function() {
+    document.getElementById("resultTable").style.display = "none";
+});
+</script>
+
+
+
+</body>
+</html>
