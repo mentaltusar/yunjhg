@@ -105,7 +105,7 @@ function showResult(event) {
     const rollNo = document.getElementById("roll_no").value;
 
     const dummyResults = {
-        "ECOR2300789": { name: "Madhusudan Adhek", mark: 88, remark: "Passed" },
+        "ECOR2300789": { name: "Madhusudan Adhek",POST:"Ticketing Clerk", mark: 88, remark: "Passed" },
         "654321": { name: "Sneha Patel", mark: 47, remark: "Failed" },
         // "7": { name: "Arjun Das", mark: 75, remark: "Passed" }
     };
@@ -120,6 +120,7 @@ function showResult(event) {
             <tr>
                 <td>${result.name}</td>
                 <td>${rollNo}</td>
+                <td>${result.POST}</td>
                 <td>${result.mark}</td>
                 <td>${result.remark}</td>
             </tr>
