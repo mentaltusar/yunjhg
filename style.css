@@ -41,7 +41,7 @@ body{
     float:right;
   }
   #bg{
-      background:url(../images/menu-bg.html) repeat-x;
+      background:url(../menu-bg.html) repeat-x;
       width:100%;
   }
   #contener{
@@ -114,7 +114,7 @@ body{
   .search_field{
     width:154px;
     height:21px;
-    background:url(../images/search.html) no-repeat;
+    background:url(../search.html) no-repeat;
     border:none;
     padding:8px 8px 8px 28px;
     font:normal 12px Arial, Helvetica, sans-serif;
@@ -135,7 +135,7 @@ body{
   }
   
   .SliderNamePrev{
-      background: url(../images/left.html) no-repeat center center;
+      background: url(../left.html) no-repeat center center;
       width: 35px;
       height: 50px;
       display: block;
@@ -146,7 +146,7 @@ body{
   }
   
   .SliderNameNext{
-      background: url(../images/right.html) no-repeat center center;
+      background: url(../right.html) no-repeat center center;
       width: 35px;
       height: 50px;
       display: block;
@@ -167,7 +167,7 @@ body{
   
   #SliderNameNavigation a:link, #SliderNameNavigation a:active, #SliderNameNavigation a:visited, #SliderNameNavigation a:hover{
       margin:0px;
-      background: url(../images/nav.html) no-repeat center center;
+      background: url(../nav.html) no-repeat center center;
       font-size: 0px;
       line-height: 0px;
       padding: 9px;
@@ -175,7 +175,7 @@ body{
   }
   
   #SliderNameNavigation a.active:link, #SliderNameNavigation a.active:active, #SliderNameNavigation a.active:visited, #SliderNameNavigation a.active:hover{
-      background: url(../images/nav_active.html) no-repeat center center;
+      background: url(../nav_active.html) no-repeat center center;
   }
   /*header slider end*/
   
@@ -196,7 +196,7 @@ body{
       height:37px;
       float:left;
       display:block;
-      background:url(../images/menu_border.html) no-repeat;
+      background:url(../menu_border.html) no-repeat;
   }
   .topmenu ul li a {
       font-family: Arial, Helvetica, sans-serif;
@@ -210,13 +210,13 @@ body{
       font-family: Arial, Helvetica, sans-serif;
       line-height:37px;
       color:#fff;
-      background:url(../images/hover_bg.html) repeat-x;
+      background:url(../hover_bg.html) repeat-x;
       padding:0px 13px;
       display:block;
   }
   .topmenu ul .activ{
     color:#fff;
-    background:url(../images/menu-hover.html) repeat-x;
+    background:url(../menu-hover.html) repeat-x;
     height:37px;
     display:block;
   }
@@ -233,7 +233,7 @@ body{
   .line{
       width:980px;
       height:11px;
-      background:url(../images/border.html) repeat-x;
+      background:url(../border.html) repeat-x;
       padding-bottom:6px;
   }
   .imp_link_1{
@@ -247,7 +247,7 @@ body{
   #imp_link_top{
       width:199px;
       height:34px;
-      background:url(../images/imp_link_bg.html) no-repeat;
+      background:url(../imp_link_bg.html) no-repeat;
       font:normal 19px Verdana, Geneva, sans-serif;
       color:#F00;
       vertical-align:bottom; 
@@ -257,7 +257,7 @@ body{
       list-style-type: none;
   }
   .imp_link ul li {
-      background-image: url(../images/bullet.html);
+      background-image: url(../bullet.html);
       background-repeat: no-repeat;
       background-position: 1px center;
       padding-left: 16px;
@@ -297,17 +297,17 @@ body{
   #board_top{
       width:188px;
       height:16px;
-      /*background:url(../images/top_board.png) top no-repeat;*/
+      /*background:url(../top_board.png) top no-repeat;*/
   }
   #board_bottom{
       width:188px;
       height:16px;
-      /*background:url(../images/bottom_board.png) no-repeat;;*/
+      /*background:url(../bottom_board.png) no-repeat;;*/
   }
   #board_middle{
       width:188px;
       height:100%;
-      /*background:url(../images/mid_board.png) repeat-y;*/
+      /*background:url(../mid_board.png) repeat-y;*/
   }
   #notice_text{
       width:175px;

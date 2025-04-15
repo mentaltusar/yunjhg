@@ -102,6 +102,7 @@
 
 function showResult(event) {
     event.preventDefault();
+    
     const rollNo = document.getElementById("roll_no").value;
 
     const dummyResults = {
@@ -115,7 +116,7 @@ function showResult(event) {
     const table = document.getElementById("resultTable");
     tbody.innerHTML = "";
 
-    if (result) {
+    if (0) {
         tbody.innerHTML = `
             <tr>
                 <td>${result.name}</td>
@@ -126,12 +127,14 @@ function showResult(event) {
         `;
     } else {
         tbody.innerHTML = `
-            <tr><td colspan="4">No result found for Roll Number: ${rollNo}</td></tr>
+            <tr><td colspan="4">Not Found</td></tr>
         `;
     }
 
     table.style.display = "table";
 }
+
+
 
 // Auto-hide result table when input changes
 document.getElementById("roll_no").addEventListener("input", function() {
